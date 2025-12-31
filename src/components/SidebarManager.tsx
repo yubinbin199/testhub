@@ -276,6 +276,11 @@ export const SidebarManager: React.FC<SidebarManagerProps> = ({
               </div>
 
               <div className="flex items-center gap-2 mt-2 pt-3 border-t border-white/5">
+                <button onClick={(e) => handleOpenEditModal(e, item)} className="flex-1 py-1.5 bg-white/10 text-white/80 hover:text-white hover:bg-white/20 rounded-lg transition-colors border border-white/10 flex items-center justify-center gap-2">
+                  <Edit2 className="w-3.5 h-3.5" />
+                  <span className="text-[10px] font-black uppercase tracking-widest">编辑</span>
+                </button>
+
                 <button 
                   onClick={(e) => { e.stopPropagation(); if (item.status !== 'running' && item.nodes > 0) onRunSingle?.(item.id); }} 
                   disabled={item.status === 'running' || item.nodes === 0}
@@ -290,11 +295,6 @@ export const SidebarManager: React.FC<SidebarManagerProps> = ({
                   <span className="text-[10px] font-black uppercase tracking-widest">执行</span>
                 </button>
                 
-                <button onClick={(e) => handleOpenEditModal(e, item)} className="flex-1 py-1.5 bg-white/10 text-white/80 hover:text-white hover:bg-white/20 rounded-lg transition-colors border border-white/10 flex items-center justify-center gap-2">
-                  <Edit2 className="w-3.5 h-3.5" />
-                  <span className="text-[10px] font-black uppercase tracking-widest">编辑</span>
-                </button>
-
                 <button 
                   onClick={(e) => handleSingleUpload(e, item.id)} 
                   className={clsx(
