@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #1a1b2e; /* Lightened from #0a0a16 */
+  --color-panel: #252642;      /* Lightened from #0d0d1a */
+  --color-border: #3a3b5c;     /* More visible border */
+  --color-primary: #5d5fef;    /* Updated to the vibrant purple in the screenshot */
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+  --color-text: #f8fafc;       /* Brighter text */
+  --color-muted: #94a3b8;      /* Readable gray */
+}
+
+:root {
+  background-color: #1a1b2e;
+  color: #f8fafc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar for better visibility on lighter background */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1b2e; 
+}
+::-webkit-scrollbar-thumb {
+  background: #3a3b5c; 
+  border-radius: 5px;
+  border: 2px solid #1a1b2e;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4b7c; 
+}
+
+/* Ensure React Flow container matches theme */
+.react-flow__container {
+  background-color: #1a1b2e;
+}
