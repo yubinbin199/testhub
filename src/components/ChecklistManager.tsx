@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link2, CheckCircle2, Clock, ListTodo, Search, X, ChevronRight, Hash, RefreshCw, AlertTriangle, Trash2 } from 'lucide-react';
+import { Link2, CheckCircle2, Clock, ListTodo, Search, ChevronRight, RefreshCw, AlertTriangle, Trash2 } from 'lucide-react';
 import type { AutomationCase } from '../App';
 import clsx from 'clsx';
 
